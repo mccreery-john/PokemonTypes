@@ -70,9 +70,8 @@
             this.type1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.type1.Location = new System.Drawing.Point(451, 23);
             this.type1.Name = "type1";
-            this.type1.Size = new System.Drawing.Size(78, 25);
+            this.type1.Size = new System.Drawing.Size(0, 25);
             this.type1.TabIndex = 0;
-            this.type1.Text = "Type 1";
             // 
             // type2
             // 
@@ -81,9 +80,8 @@
             this.type2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.type2.Location = new System.Drawing.Point(732, 23);
             this.type2.Name = "type2";
-            this.type2.Size = new System.Drawing.Size(78, 25);
+            this.type2.Size = new System.Drawing.Size(0, 25);
             this.type2.TabIndex = 1;
-            this.type2.Text = "Type 2";
             // 
             // clearButton
             // 
@@ -108,6 +106,7 @@
             this.normalButton.TabIndex = 3;
             this.normalButton.Text = "Normal";
             this.normalButton.UseVisualStyleBackColor = false;
+            this.normalButton.Click += new System.EventHandler(this.normalButton_Click);
             // 
             // fightingButton
             // 

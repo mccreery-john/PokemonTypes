@@ -12,7 +12,7 @@ namespace PokemonTypes
 {
     public partial class MainWindow : Form
     {
-        string[] currentTypes;
+        string[] currentTypes = new string[2];
         double[,] typeValues =
             {
                 { 1, 2, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },                               //Normal
@@ -36,6 +36,7 @@ namespace PokemonTypes
 
         private void refreshTypes()
         {
+            
             fourX.Items.Clear();
             twoX.Items.Clear();
             oneX.Items.Clear();
@@ -65,6 +66,13 @@ namespace PokemonTypes
             fairyItem.Text = fairyButton.Text;
             //End types' ListViewItems
 
+
+
+            type1.Text = currentTypes[0];   //FIX ME  ---- Put color with the types
+            type2.Text = currentTypes[1];
+
+
+
             if (currentTypes != null)
             {
                 //FIX ME
@@ -73,10 +81,10 @@ namespace PokemonTypes
                 for (int i = 0; i < 18; i++)
                 {
                     double currentValue = 1.0;
-                    for (int j = 0; j < currentTypes.Length; j++)
+                    for (int j = 0; j < currentTypes.Length - 1; j++)
                     {
 
-                        switch (currentTypes[i])
+                        switch (currentTypes[j])
                         {
                             case "Normal":
                                 typeValues[0, i] *= currentValue;
@@ -98,8 +106,25 @@ namespace PokemonTypes
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            currentTypes = null;
+            currentTypes[0] = null;
+            currentTypes[1] = null;
             refreshTypes();
+        }
+
+        private void normalButton_Click(object sender, EventArgs e)
+        {
+            if (currentTypes[0] == null)
+            {
+                currentTypes[0] = "Normal";
+                refreshTypes();
+
+            }else if (currentTypes[1] == null)
+            {
+                currentTypes[1] = "Normal";
+                refreshTypes();
+            }
+
+
         }
     }
 }
