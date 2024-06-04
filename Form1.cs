@@ -13,13 +13,19 @@ namespace PokemonTypes
     public partial class MainWindow : Form
     {
         string[] currentTypes;
-        double[,] typeValues;           //FIX ME
+        double[,] typeValues =
+            {
+                { 1, 2, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },                               //Normal
+                { 1, 1, 2, 1, 1, 0.5, 0.5, 1, 1, 1, 1, 1, 1, 2, 1, 1, 0.5, 1 },                         //Fighting
+
+                //FIX ME
+
+                {1, 0.5, 1, 2, 1, 1, 0.5, 1, 2, 1, 1, 1, 1, 1, 1, 0, 0.5, 1}                            //Fairy
+            };
 
         public MainWindow()
         {
             InitializeComponent();
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
