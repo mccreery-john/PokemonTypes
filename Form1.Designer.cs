@@ -119,6 +119,7 @@
             this.fightingButton.TabIndex = 4;
             this.fightingButton.Text = "Fighting";
             this.fightingButton.UseVisualStyleBackColor = false;
+            this.fightingButton.Click += new System.EventHandler(this.fightingButton_Click);
             // 
             // poisonButton
             // 
@@ -132,6 +133,7 @@
             this.poisonButton.TabIndex = 6;
             this.poisonButton.Text = "Poison";
             this.poisonButton.UseVisualStyleBackColor = false;
+            this.poisonButton.Click += new System.EventHandler(this.poisonButton_Click);
             // 
             // flyingButton
             // 
@@ -144,6 +146,7 @@
             this.flyingButton.TabIndex = 5;
             this.flyingButton.Text = "Flying";
             this.flyingButton.UseVisualStyleBackColor = false;
+            this.flyingButton.Click += new System.EventHandler(this.flyingButton_Click);
             // 
             // rockButton
             // 
@@ -169,6 +172,7 @@
             this.groundButton.TabIndex = 7;
             this.groundButton.Text = "Ground";
             this.groundButton.UseVisualStyleBackColor = false;
+            this.groundButton.Click += new System.EventHandler(this.groundButton_Click);
             // 
             // grassButton
             // 
