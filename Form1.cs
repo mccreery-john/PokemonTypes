@@ -34,7 +34,7 @@ namespace PokemonTypes
                 {1, 2, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 1, 1, 0, 1, 1, 0.5, 2 },                            //Dark
                 {1, 0.5, 1, 2, 1, 1, 0.5, 1, 2, 1, 1, 1, 1, 1, 1, 0, 0.5, 1}                            //Fairy
             };
-        //Referenece of these values is the table found on https://bulbapedia.bulbagarden.net/wiki/Type under the type chart section 
+        //Referenece of these values is the table found on https://bulbapedia.bulbagarden.net/wiki/Type under the type chart sub-section 
    
         ListViewItem[] itemsArray = new ListViewItem[18];
 
@@ -48,6 +48,8 @@ namespace PokemonTypes
             currentTypes[0] = -1;
             currentTypes[1] = -1;
 
+
+            //          SIMPLIFY HERE               FIX ME
             //Start types' ListViewItems
             ListViewItem normalItem = new ListViewItem();
             normalItem.BackColor = normalButton.BackColor;
@@ -159,7 +161,7 @@ namespace PokemonTypes
             //End types' ListViewItems
         }
 
-
+        //Helper Functions                      **********************************************
         private void refreshTypes()
         {
             
@@ -208,7 +210,7 @@ namespace PokemonTypes
                             fourthX.Items.Add(itemsArray[i]);
                             break;
                         default:
-                            //
+                            //      Add error message here FIX ME
                             break;
 
                     }
@@ -227,10 +229,11 @@ namespace PokemonTypes
             lab.ForeColor = button.ForeColor;
             refreshTypes();
         }
+        //End Helper Functions                  ***********************************************
+
 
 
         //Button Clicks ************************************************************************
-
         private void typeButton_Click(object sender, EventArgs e)
         {
             int typeID = -1;
@@ -294,6 +297,7 @@ namespace PokemonTypes
                     break;
 
                 default :
+                    //  Add error message here      FIX ME
                     break;
             }
 
@@ -319,12 +323,6 @@ namespace PokemonTypes
             type2.Text = string.Empty;
             refreshTypes();
         }
-
-        
-
-
-
-
         //End Button Clicks ************************************************************************
     }
 }
