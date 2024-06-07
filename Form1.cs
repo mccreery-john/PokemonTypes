@@ -34,6 +34,8 @@ namespace PokemonTypes
                 {1, 2, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 1, 1, 0, 1, 1, 0.5, 2 },                            //Dark
                 {1, 0.5, 1, 2, 1, 1, 0.5, 1, 2, 1, 1, 1, 1, 1, 1, 0, 0.5, 1}                            //Fairy
             };
+        //Referenece of these values is the table found on https://bulbapedia.bulbagarden.net/wiki/Type under the type chart section 
+   
         ListViewItem[] itemsArray = new ListViewItem[18];
 
         public MainWindow()
@@ -172,18 +174,16 @@ namespace PokemonTypes
 
             if (currentTypes[0] != -1)
             {
-                //FIX ME
-
 
                 for (int i = 0; i < 18; i++)
                 {
                     double currentValue = 1.0;
-                    for (int j = 0; j < currentTypes.Length - 1; j++)
+                    for (int j = 0; j < currentTypes.Length; j++)
                     {
 
                         if (currentTypes[j] != -1)
                         {
-                            currentValue *= typeValues[currentTypes[j], i];
+                            currentValue = typeValues[currentTypes[j], i] * currentValue;
                         }
                     }
 
@@ -233,7 +233,7 @@ namespace PokemonTypes
 
         private void typeButton_Click(object sender, EventArgs e)
         {
-            int typeID;
+            int typeID = -1;
             Button button = sender as Button;
 
             switch (button.Text)
@@ -253,9 +253,60 @@ namespace PokemonTypes
                 case "Ground":
                     typeID = 4;
                     break;
+                case "Rock":
+                    typeID = 5;
+                    break;
+                case "Bug":
+                    typeID = 6;
+                    break;
+                case "Ghost":
+                    typeID = 7;
+                    break;
+                case "Steel":
+                    typeID = 8;
+                    break;
+                case "Fire":
+                    typeID = 9;
+                    break;
+                case "Water":
+                    typeID = 10;
+                    break;
+                case "Grass":
+                    typeID = 11;
+                    break;
+                case "Electric":
+                    typeID = 12;
+                    break;
+                case "Psychic":
+                    typeID = 13;
+                    break;
+                case "Ice":
+                    typeID = 14;
+                    break;
+                case "Dragon":
+                    typeID = 15;
+                    break;
+                case "Dark":
+                    typeID = 16;
+                    break;
+                case "Fairy":
+                    typeID = 17;
+                    break;
 
                 default :
                     break;
+            }
+
+            if (currentTypes[0] == -1)
+            {
+                currentTypes[0] = typeID;
+                typeTextColor(button, type1);
+
+            }
+            else if (currentTypes[1] == -1)
+            {
+                currentTypes[1] = typeID;
+                typeTextColor(button, type2);
             }
 
         }
@@ -269,97 +320,7 @@ namespace PokemonTypes
             refreshTypes();
         }
 
-        private void normalButton_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            if (currentTypes[0] == -1)
-            {
-                currentTypes[0] = 0;
-                typeTextColor(button, type1);
-
-            }
-            else if (currentTypes[1] == -1)
-            {
-                currentTypes[1] = 0;
-                typeTextColor(button, type2);
-            }
-
-
-        }
-
-        private void fightingButton_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            if (currentTypes[0] == -1)
-            {
-
-                currentTypes[0] = 1;
-                typeTextColor(button, type1);
-
-            }
-            else if (currentTypes[1] == -1)
-            {
-                currentTypes[1] = 1;
-                typeTextColor(button, type2);
-            }
-        }
-
-        private void flyingButton_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            if (currentTypes[0] == -1)
-            {
-
-                currentTypes[0] = 2;
-                typeTextColor(button, type1);
-
-            }
-            else if (currentTypes[1] == -1)
-            {
-                currentTypes[1] = 2;
-                typeTextColor(button, type2);
-            }
-        }
-
-        private void poisonButton_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            if (currentTypes[0] == -1)
-            {
-
-                currentTypes[0] = 3;
-                typeTextColor(button, type1);
-
-            }
-            else if (currentTypes[1] == -1)
-            {
-                currentTypes[1] = 3;
-                typeTextColor(button, type2);
-            }
-        }
-
-        private void groundButton_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            if (currentTypes[0] != -1)
-            {
-                
-                currentTypes[0] = 4;
-                type1.Text = button.Text;
-                type1.BackColor = button.BackColor;
-                type1.ForeColor = button.ForeColor;
-                refreshTypes();
-
-            }
-            else if (currentTypes[1] != -1)
-            {
-                currentTypes[1] = 4;
-                type2.Text = groundButton.Text;
-                type2.BackColor = groundButton.BackColor;
-                type2.ForeColor = groundButton.ForeColor;
-                refreshTypes();
-            }
-        }
+        
 
 
 

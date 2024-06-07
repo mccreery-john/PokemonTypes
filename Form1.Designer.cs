@@ -106,7 +106,7 @@
             this.normalButton.TabIndex = 3;
             this.normalButton.Text = "Normal";
             this.normalButton.UseVisualStyleBackColor = false;
-            this.normalButton.Click += new System.EventHandler(this.normalButton_Click);
+            this.normalButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // fightingButton
             // 
@@ -119,7 +119,7 @@
             this.fightingButton.TabIndex = 4;
             this.fightingButton.Text = "Fighting";
             this.fightingButton.UseVisualStyleBackColor = false;
-            this.fightingButton.Click += new System.EventHandler(this.fightingButton_Click);
+            this.fightingButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // poisonButton
             // 
@@ -133,7 +133,7 @@
             this.poisonButton.TabIndex = 6;
             this.poisonButton.Text = "Poison";
             this.poisonButton.UseVisualStyleBackColor = false;
-            this.poisonButton.Click += new System.EventHandler(this.poisonButton_Click);
+            this.poisonButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // flyingButton
             // 
@@ -146,7 +146,7 @@
             this.flyingButton.TabIndex = 5;
             this.flyingButton.Text = "Flying";
             this.flyingButton.UseVisualStyleBackColor = false;
-            this.flyingButton.Click += new System.EventHandler(this.flyingButton_Click);
+            this.flyingButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // rockButton
             // 
@@ -159,6 +159,7 @@
             this.rockButton.TabIndex = 8;
             this.rockButton.Text = "Rock";
             this.rockButton.UseVisualStyleBackColor = false;
+            this.rockButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // groundButton
             // 
@@ -172,7 +173,7 @@
             this.groundButton.TabIndex = 7;
             this.groundButton.Text = "Ground";
             this.groundButton.UseVisualStyleBackColor = false;
-            this.groundButton.Click += new System.EventHandler(this.groundButton_Click);
+            this.groundButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // grassButton
             // 
@@ -186,6 +187,7 @@
             this.grassButton.TabIndex = 14;
             this.grassButton.Text = "Grass";
             this.grassButton.UseVisualStyleBackColor = false;
+            this.grassButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // waterButton
             // 
@@ -199,6 +201,7 @@
             this.waterButton.TabIndex = 13;
             this.waterButton.Text = "Water";
             this.waterButton.UseVisualStyleBackColor = false;
+            this.waterButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // fireButton
             // 
@@ -212,6 +215,7 @@
             this.fireButton.TabIndex = 12;
             this.fireButton.Text = "Fire";
             this.fireButton.UseVisualStyleBackColor = false;
+            this.fireButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // steelButton
             // 
@@ -225,6 +229,7 @@
             this.steelButton.TabIndex = 11;
             this.steelButton.Text = "Steel";
             this.steelButton.UseVisualStyleBackColor = false;
+            this.steelButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // ghostButton
             // 
@@ -238,6 +243,7 @@
             this.ghostButton.TabIndex = 10;
             this.ghostButton.Text = "Ghost";
             this.ghostButton.UseVisualStyleBackColor = false;
+            this.ghostButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // bugButton
             // 
@@ -250,6 +256,7 @@
             this.bugButton.TabIndex = 9;
             this.bugButton.Text = "Bug";
             this.bugButton.UseVisualStyleBackColor = false;
+            this.bugButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // fairyButton
             // 
@@ -262,6 +269,7 @@
             this.fairyButton.TabIndex = 20;
             this.fairyButton.Text = "Fairy";
             this.fairyButton.UseVisualStyleBackColor = false;
+            this.fairyButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // darkButton
             // 
@@ -275,6 +283,7 @@
             this.darkButton.TabIndex = 19;
             this.darkButton.Text = "Dark";
             this.darkButton.UseVisualStyleBackColor = false;
+            this.darkButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // dragonButton
             // 
@@ -288,6 +297,7 @@
             this.dragonButton.TabIndex = 18;
             this.dragonButton.Text = "Dragon";
             this.dragonButton.UseVisualStyleBackColor = false;
+            this.dragonButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // iceButton
             // 
@@ -301,6 +311,7 @@
             this.iceButton.TabIndex = 17;
             this.iceButton.Text = "Ice";
             this.iceButton.UseVisualStyleBackColor = false;
+            this.iceButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // psychicButton
             // 
@@ -314,6 +325,7 @@
             this.psychicButton.TabIndex = 16;
             this.psychicButton.Text = "Psychic";
             this.psychicButton.UseVisualStyleBackColor = false;
+            this.psychicButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // electricButton
             // 
@@ -326,6 +338,7 @@
             this.electricButton.TabIndex = 15;
             this.electricButton.Text = "Electric";
             this.electricButton.UseVisualStyleBackColor = false;
+            this.electricButton.Click += new System.EventHandler(this.typeButton_Click);
             // 
             // label1
             // 
