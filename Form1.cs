@@ -47,118 +47,17 @@ namespace PokemonTypes
         {
             currentTypes[0] = -1;
             currentTypes[1] = -1;
+            Button[] buttonArray = { normalButton, fightingButton, flyingButton, poisonButton, groundButton, rockButton, bugButton, ghostButton, steelButton, fireButton, waterButton, grassButton, electricButton, psychicButton, iceButton, dragonButton, darkButton, fairyButton };
 
-
-            //          SIMPLIFY HERE               FIX ME
-            //Start types' ListViewItems
-            ListViewItem normalItem = new ListViewItem();
-            normalItem.BackColor = normalButton.BackColor;
-            normalItem.ForeColor = normalButton.ForeColor;
-            normalItem.Text = normalButton.Text;
-            itemsArray[0] = normalItem;
-
-            ListViewItem fightItem = new ListViewItem();
-            fightItem.BackColor = fightingButton.BackColor;
-            fightItem.ForeColor = fightingButton.ForeColor;
-            fightItem.Text = fightingButton.Text;
-            itemsArray[1] = fightItem;
-
-            ListViewItem flyingItem = new ListViewItem();
-            flyingItem.BackColor = flyingButton.BackColor;
-            flyingItem.ForeColor = flyingButton.ForeColor;
-            flyingItem.Text = flyingButton.Text;
-            itemsArray[2] = flyingItem;
-
-            ListViewItem poisonItem = new ListViewItem();
-            poisonItem.BackColor = poisonButton.BackColor;
-            poisonItem.ForeColor = poisonButton.ForeColor;
-            poisonItem.Text = poisonButton.Text;
-            itemsArray[3] = poisonItem;
-
-            ListViewItem groundItem = new ListViewItem();
-            groundItem.BackColor = groundButton.BackColor;
-            groundItem.ForeColor = groundButton.ForeColor;
-            groundItem.Text = groundButton.Text;
-            itemsArray[4] = groundItem;
-
-            ListViewItem rockItem = new ListViewItem();
-            rockItem.BackColor = rockButton.BackColor;
-            rockItem.ForeColor = rockButton.ForeColor;
-            rockItem.Text = rockButton.Text;
-            itemsArray[5] = rockItem;
-
-            ListViewItem bugItem = new ListViewItem();
-            bugItem.BackColor = bugButton.BackColor;
-            bugItem.ForeColor = bugButton.ForeColor;
-            bugItem.Text = bugButton.Text;
-            itemsArray[6] = bugItem;
-
-            ListViewItem ghostItem = new ListViewItem();
-            ghostItem.BackColor = ghostButton.BackColor;
-            ghostItem.ForeColor = ghostButton.ForeColor;
-            ghostItem.Text = ghostButton.Text;
-            itemsArray[7] = ghostItem;
-
-            ListViewItem steelItem = new ListViewItem();
-            steelItem.BackColor = steelButton.BackColor;
-            steelItem.ForeColor = steelButton.ForeColor;
-            steelItem.Text = steelButton.Text;
-            itemsArray[8] = steelItem;
-
-            ListViewItem fireItem = new ListViewItem();
-            fireItem.BackColor = fireButton.BackColor;
-            fireItem.ForeColor = fireButton.ForeColor;
-            fireItem.Text = fireButton.Text;
-            itemsArray[9] = fireItem;
-
-            ListViewItem waterItem = new ListViewItem();
-            waterItem.BackColor = waterButton.BackColor;
-            waterItem.ForeColor = waterButton.ForeColor;
-            waterItem.Text = waterButton.Text;
-            itemsArray[10] = waterItem;
-
-            ListViewItem grassItem = new ListViewItem();
-            grassItem.BackColor = grassButton.BackColor;
-            grassItem.ForeColor = grassButton.ForeColor;
-            grassItem.Text = grassButton.Text;
-            itemsArray[11] = grassItem;
-
-            ListViewItem electricItem = new ListViewItem();
-            electricItem.BackColor = electricButton.BackColor;
-            electricItem.ForeColor = electricButton.ForeColor;
-            electricItem.Text = electricButton.Text;
-            itemsArray[12] = electricItem;
-
-            ListViewItem psychicItem = new ListViewItem();
-            psychicItem.BackColor = psychicButton.BackColor;
-            psychicItem.ForeColor = psychicButton.ForeColor;
-            psychicItem.Text = psychicButton.Text;
-            itemsArray[13] = psychicItem;
-
-            ListViewItem iceItem = new ListViewItem();
-            iceItem.BackColor = iceButton.BackColor;
-            iceItem.ForeColor = iceButton.ForeColor;
-            iceItem.Text = iceButton.Text;
-            itemsArray[14] = iceItem;
-
-            ListViewItem dragonItem = new ListViewItem();
-            dragonItem.BackColor = dragonButton.BackColor;
-            dragonItem.ForeColor = dragonButton.ForeColor;
-            dragonItem.Text = dragonButton.Text;
-            itemsArray[15] = dragonItem;
-
-            ListViewItem darkItem = new ListViewItem();
-            darkItem.BackColor = darkButton.BackColor;
-            darkItem.ForeColor = darkButton.ForeColor;
-            darkItem.Text = darkButton.Text;
-            itemsArray[16] = darkItem;
-
-            ListViewItem fairyItem = new ListViewItem();
-            fairyItem.BackColor = fairyButton.BackColor;
-            fairyItem.ForeColor = fairyButton.ForeColor;
-            fairyItem.Text = fairyButton.Text;
-            itemsArray[17] = fairyItem;
-            //End types' ListViewItems
+            for (int index = 0; index < 18; index++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = buttonArray[index].Text;
+                item.ForeColor = buttonArray[index].ForeColor;
+                item.BackColor = buttonArray[index].BackColor;
+                itemsArray[index] = item;
+            }
+           
         }
 
         //Helper Functions                      **********************************************
@@ -309,7 +208,7 @@ namespace PokemonTypes
             }
             else if (currentTypes[1] == -1)
             {
-                if (button.Text != type1.Text)
+                if (button.Text != type1.Text)      //disallow double of the same type
                 {
                     currentTypes[1] = typeID;
                     typeTextColor(button, type2);
