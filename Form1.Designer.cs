@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.type1 = new System.Windows.Forms.Label();
             this.type2 = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
@@ -61,6 +62,8 @@
             this.oneX = new System.Windows.Forms.ListView();
             this.fourthX = new System.Windows.Forms.ListView();
             this.zeroX = new System.Windows.Forms.ListView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // type1
@@ -484,6 +487,10 @@
             this.zeroX.UseCompatibleStateImageBehavior = false;
             this.zeroX.View = System.Windows.Forms.View.List;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,6 +532,7 @@
             this.Name = "MainWindow";
             this.Text = "Pokemon Type Weaknesses";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,6 +573,7 @@
         private System.Windows.Forms.ListView oneX;
         private System.Windows.Forms.ListView fourthX;
         private System.Windows.Forms.ListView zeroX;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

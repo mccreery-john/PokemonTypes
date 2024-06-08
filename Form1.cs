@@ -78,6 +78,7 @@ namespace PokemonTypes
 
                 for (int i = 0; i < 18; i++)
                 {
+                    int error = 0;
                     double currentValue = 1.0;
                     for (int j = 0; j < currentTypes.Length; j++)
                     {
@@ -109,9 +110,17 @@ namespace PokemonTypes
                             fourthX.Items.Add(itemsArray[i]);
                             break;
                         default:
-                            //      Add error message here FIX ME
+                            //Error
+                            MessageBox.Show("Error: type matchup not found", "Error: Weakness", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearTypes();
+                            error = 1;
                             break;
 
+                    }
+
+                    if (error != 0)
+                    {
+                        break;
                     }
 
                 }
@@ -126,6 +135,15 @@ namespace PokemonTypes
             lab.Text = button.Text;
             lab.BackColor = button.BackColor;
             lab.ForeColor = button.ForeColor;
+            refreshTypes();
+        } 
+
+        private void clearTypes()
+        {
+            currentTypes[0] = -1;
+            currentTypes[1] = -1;
+            type1.Text = string.Empty;
+            type2.Text = string.Empty;
             refreshTypes();
         }
         //End Helper Functions                  ***********************************************
@@ -196,11 +214,14 @@ namespace PokemonTypes
                     break;
 
                 default :
-                    //  Add error message here      FIX ME
+                    //  Add error message given later
                     break;
             }
-
-            if (currentTypes[0] == -1)
+            if (typeID == -1) //Type not found error
+            {
+                MessageBox.Show("Error: type not found", "Error: Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (currentTypes[0] == -1)
             {
                 currentTypes[0] = typeID;
                 typeTextColor(button, type1);
@@ -219,11 +240,7 @@ namespace PokemonTypes
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            currentTypes[0] = -1;
-            currentTypes[1] = -1;
-            type1.Text = string.Empty;
-            type2.Text = string.Empty;
-            refreshTypes();
+            clearTypes();
         }
         //End Button Clicks ************************************************************************
     }
