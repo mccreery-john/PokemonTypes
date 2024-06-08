@@ -309,8 +309,11 @@ namespace PokemonTypes
             }
             else if (currentTypes[1] == -1)
             {
-                currentTypes[1] = typeID;
-                typeTextColor(button, type2);
+                if (button.Text != type1.Text)
+                {
+                    currentTypes[1] = typeID;
+                    typeTextColor(button, type2);
+                }
             }
 
         }
