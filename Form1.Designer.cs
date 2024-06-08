@@ -345,22 +345,24 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 260);
+            this.label1.Location = new System.Drawing.Point(272, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "4x";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(451, 260);
+            this.label2.Location = new System.Drawing.Point(446, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 25);
             this.label2.TabIndex = 22;
             this.label2.Text = "2x";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -372,6 +374,7 @@
             this.label3.Size = new System.Drawing.Size(35, 25);
             this.label3.TabIndex = 23;
             this.label3.Text = "1x";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -383,17 +386,18 @@
             this.label4.Size = new System.Drawing.Size(53, 25);
             this.label4.TabIndex = 24;
             this.label4.Text = "1/2x";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(955, 260);
+            this.label5.Location = new System.Drawing.Point(965, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 25);
             this.label5.TabIndex = 25;
             this.label5.Text = "1/4x";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -411,10 +415,10 @@
             this.fourX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.fourX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fourX.HideSelection = false;
-            this.fourX.Location = new System.Drawing.Point(239, 294);
+            this.fourX.Location = new System.Drawing.Point(215, 294);
             this.fourX.Margin = new System.Windows.Forms.Padding(0);
             this.fourX.Name = "fourX";
-            this.fourX.Size = new System.Drawing.Size(123, 317);
+            this.fourX.Size = new System.Drawing.Size(145, 317);
             this.fourX.TabIndex = 28;
             this.fourX.UseCompatibleStateImageBehavior = false;
             this.fourX.View = System.Windows.Forms.View.List;
@@ -424,9 +428,9 @@
             this.twoX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.twoX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoX.HideSelection = false;
-            this.twoX.Location = new System.Drawing.Point(406, 294);
+            this.twoX.Location = new System.Drawing.Point(390, 294);
             this.twoX.Name = "twoX";
-            this.twoX.Size = new System.Drawing.Size(123, 317);
+            this.twoX.Size = new System.Drawing.Size(145, 317);
             this.twoX.TabIndex = 29;
             this.twoX.UseCompatibleStateImageBehavior = false;
             this.twoX.View = System.Windows.Forms.View.List;
@@ -436,9 +440,9 @@
             this.halfX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.halfX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.halfX.HideSelection = false;
-            this.halfX.Location = new System.Drawing.Point(753, 294);
+            this.halfX.Location = new System.Drawing.Point(740, 294);
             this.halfX.Name = "halfX";
-            this.halfX.Size = new System.Drawing.Size(123, 317);
+            this.halfX.Size = new System.Drawing.Size(145, 317);
             this.halfX.TabIndex = 30;
             this.halfX.UseCompatibleStateImageBehavior = false;
             this.halfX.View = System.Windows.Forms.View.List;
@@ -448,9 +452,9 @@
             this.oneX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.oneX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oneX.HideSelection = false;
-            this.oneX.Location = new System.Drawing.Point(578, 294);
+            this.oneX.Location = new System.Drawing.Point(565, 294);
             this.oneX.Name = "oneX";
-            this.oneX.Size = new System.Drawing.Size(123, 317);
+            this.oneX.Size = new System.Drawing.Size(145, 317);
             this.oneX.TabIndex = 31;
             this.oneX.UseCompatibleStateImageBehavior = false;
             this.oneX.View = System.Windows.Forms.View.List;
@@ -460,9 +464,9 @@
             this.fourthX.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.fourthX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fourthX.HideSelection = false;
-            this.fourthX.Location = new System.Drawing.Point(916, 294);
+            this.fourthX.Location = new System.Drawing.Point(915, 294);
             this.fourthX.Name = "fourthX";
-            this.fourthX.Size = new System.Drawing.Size(123, 317);
+            this.fourthX.Size = new System.Drawing.Size(145, 317);
             this.fourthX.TabIndex = 32;
             this.fourthX.UseCompatibleStateImageBehavior = false;
             this.fourthX.View = System.Windows.Forms.View.List;
