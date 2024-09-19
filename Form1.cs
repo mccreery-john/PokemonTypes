@@ -242,6 +242,24 @@ namespace PokemonTypes
         {
             clearTypes();
         }
+
+        private void clearFirstButton_Click(object sender, EventArgs e)
+        {
+            currentTypes[0] = currentTypes[1];
+            type1.Text = type2.Text;
+            type1.BackColor = type2.BackColor;
+            type1.ForeColor = type2.ForeColor;
+            currentTypes[1] = -1;
+            type2.Text = string.Empty;
+            refreshTypes();
+        }
+
+        private void clearSecondButton_Click(object sender, EventArgs e)
+        {
+            currentTypes[1] = -1;
+            type2.Text = string.Empty;
+            refreshTypes();
+        }
         //End Button Clicks ************************************************************************
     }
 }
