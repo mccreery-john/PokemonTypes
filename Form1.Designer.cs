@@ -495,22 +495,24 @@
             // 
             // clearFirstButton
             // 
+            this.clearFirstButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.clearFirstButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearFirstButton.Location = new System.Drawing.Point(240, 74);
             this.clearFirstButton.Name = "clearFirstButton";
             this.clearFirstButton.Size = new System.Drawing.Size(123, 54);
-            this.clearFirstButton.TabIndex = 34;
+            this.clearFirstButton.TabIndex = 2;
             this.clearFirstButton.Text = "Clear First Type";
             this.clearFirstButton.UseVisualStyleBackColor = true;
             this.clearFirstButton.Click += new System.EventHandler(this.clearFirstButton_Click);
             // 
             // clearSecondButton
             // 
+            this.clearSecondButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.clearSecondButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearSecondButton.Location = new System.Drawing.Point(915, 74);
             this.clearSecondButton.Name = "clearSecondButton";
             this.clearSecondButton.Size = new System.Drawing.Size(123, 54);
-            this.clearSecondButton.TabIndex = 35;
+            this.clearSecondButton.TabIndex = 2;
             this.clearSecondButton.Text = "Clear Second Type";
             this.clearSecondButton.UseVisualStyleBackColor = true;
             this.clearSecondButton.Click += new System.EventHandler(this.clearSecondButton_Click);
