@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.type1 = new System.Windows.Forms.Label();
             this.type2 = new System.Windows.Forms.Label();
             this.clearButton = new System.Windows.Forms.Button();
@@ -557,6 +558,7 @@
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.type2);
             this.Controls.Add(this.type1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.Text = "Pokemon Type Weaknesses";
             this.Load += new System.EventHandler(this.Form1_Load);
