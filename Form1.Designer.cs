@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.type1 = new System.Windows.Forms.Label();
             this.type2 = new System.Windows.Forms.Label();
@@ -63,10 +62,11 @@
             this.oneX = new System.Windows.Forms.ListView();
             this.fourthX = new System.Windows.Forms.ListView();
             this.zeroX = new System.Windows.Forms.ListView();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.clearFirstButton = new System.Windows.Forms.Button();
             this.clearSecondButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.chartButton = new System.Windows.Forms.Button();
+            this.chartPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // type1
@@ -490,10 +490,6 @@
             this.zeroX.UseCompatibleStateImageBehavior = false;
             this.zeroX.View = System.Windows.Forms.View.List;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // clearFirstButton
             // 
             this.clearFirstButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -518,11 +514,38 @@
             this.clearSecondButton.UseVisualStyleBackColor = true;
             this.clearSecondButton.Click += new System.EventHandler(this.clearSecondButton_Click);
             // 
+            // chartButton
+            // 
+            this.chartButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartButton.Location = new System.Drawing.Point(215, 167);
+            this.chartButton.Name = "chartButton";
+            this.chartButton.Size = new System.Drawing.Size(123, 54);
+            this.chartButton.TabIndex = 34;
+            this.chartButton.Text = "Toggle Type Chart";
+            this.chartButton.UseVisualStyleBackColor = true;
+            this.chartButton.Click += new System.EventHandler(this.chartButton_Click);
+            // 
+            // chartPictureBox
+            // 
+            this.chartPictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.chartPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.chartPictureBox.Image = global::PokemonTypes.Properties.Resources.PokemonTypeChart;
+            this.chartPictureBox.Location = new System.Drawing.Point(135, 248);
+            this.chartPictureBox.Name = "chartPictureBox";
+            this.chartPictureBox.Size = new System.Drawing.Size(1004, 501);
+            this.chartPictureBox.TabIndex = 35;
+            this.chartPictureBox.TabStop = false;
+            this.chartPictureBox.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1266, 775);
+            this.Controls.Add(this.chartPictureBox);
+            this.Controls.Add(this.chartButton);
             this.Controls.Add(this.clearSecondButton);
             this.Controls.Add(this.clearFirstButton);
             this.Controls.Add(this.zeroX);
@@ -562,7 +585,7 @@
             this.Name = "MainWindow";
             this.Text = "Pokemon Type Weaknesses";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -603,9 +626,10 @@
         private System.Windows.Forms.ListView oneX;
         private System.Windows.Forms.ListView fourthX;
         private System.Windows.Forms.ListView zeroX;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button clearSecondButton;
         private System.Windows.Forms.Button clearFirstButton;
+        private System.Windows.Forms.Button chartButton;
+        private System.Windows.Forms.PictureBox chartPictureBox;
     }
 }
 

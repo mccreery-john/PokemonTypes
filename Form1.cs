@@ -260,6 +260,17 @@ namespace PokemonTypes
             type2.Text = string.Empty;
             refreshTypes();
         }
+
+        private void chartButton_Click(object sender, EventArgs e)
+        {
+            if (chartPictureBox.Visible == false)
+            {
+                chartPictureBox.Visible = true;
+            }else
+            {
+                chartPictureBox.Visible = false;
+            }
+        }
         //End Button Clicks ************************************************************************
     }
 }
